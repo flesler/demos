@@ -11,14 +11,14 @@ jQuery(function( $ ){
 	$('button').click(function(){//this is not the cleanest way to do this, I'm just keeping it short.
 		var index = parseInt( $(this).prev('input').val() ) || 0;
 		var $c = $(this).parent().next();
-		$c.stop().scrollTo('li:eq('+index+')', {speed:2500, easing:'elasout',axis:$c.attr('id')});
+		$c.stop().scrollTo('li:eq('+index+')', {duration:2500, easing:'elasout',axis:$c.attr('id')});
 	});
 	$('#btn_screen').click(function(){
-		$.scrollTo( $('#txt_screen').val(), {speed:2500} );
+		$.scrollTo( $('#txt_screen').val(), {duration:2500} );
 	});
 	$('div.container a').click(function(){
 		var $c = $(this).parents('.container');
-		$c.stop().scrollTo( 0, {speed:2000,axis:$c.attr('id'), queue:true} );
+		$c.stop().scrollTo( 0, {duration:2000,axis:$c.attr('id'), queue:true} );
 		return false;
 	});
 });
