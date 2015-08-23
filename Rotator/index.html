@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, rotate, rotator, collections, class, object, ariel, flesler" />
+	<meta name="description" content="Demo of Rotator. A generic class to rotate different kind of collections, made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>Rotator</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<link href='css/style.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='js/rotator-min.js'></script>
+	
+	<!-- Timestamp: 1440348210 -->
+</head>
+<body>
+	<h1>Rotator&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+			<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a target="_blank" href="http://flesler.blogspot.com/2008/02/rotator.html">Homepage</a></li>
+<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/rotator-1.0.0.zip">Rotator 1.0.0 Zip</a></li>
+<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/rotator-1.0.0.js">Rotator 1.0.0 Source</a></li>
+<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/rotator-1.0.0-min.js">Rotator 1.0.0 Minified</a></li>
+			</ul>
+		</div>
+		</div>
+		<div class="example">
+		<ul id="numbers">
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+			<li>five</li>
+			<li>six</li>
+			<li>seven</li>
+			<li>eight</li>
+		</ul>
+	</div>
+	
+	<div class="example">	
+		<p id="semaphore">-1234567</p>
+	</div>
+	
+	
+	<div class="example">
+		<img src="red.jpg"  />
+		<img src="yellow.jpg"  />
+		<img src="green.jpg"  />
+	</div>
+	
+	<script type="text/javascript">
+		var semaphore = document.getElementById('semaphore'),
+			numbers = document.getElementById('numbers');
+		
+		var nodeRotator = new Rotator( numbers.getElementsByTagName('li'), function( li, index ){
+			this.parentNode.insertBefore(li,this); //rotate (visually) the matched dom elements
+		});
+		var stringRotator = new Rotator( '-1234567' );//rotate the characters of this string
+		var sourceRotator = new Rotator( document.getElementsByTagName('img'), 'src','src' );//rotate the sources of the images
+		
+		setInterval(function(){
+			nodeRotator.right();
+			stringRotator.left();
+			sourceRotator.left();
+			semaphore.innerHTML = stringRotator.collection().join('');
+		},700);
+	</script>
+	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+
+</body>
+</html>

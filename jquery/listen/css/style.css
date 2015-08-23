@@ -1,0 +1,32 @@
+.clicked{
+	background-color:lavender;
+}
+.hovered{
+	background-color:#6A6;
+}
+.focused{
+	color:red;
+}
+#container{
+	padding-left:10px;
+	width:740px;
+	border:1px solid darkgray;
+	background-color:white;
+}
+#items{
+	margin:10px;
+	cursor:pointer;
+	border:1px solid darkgray;
+	padding:0;
+	width:700px;
+}
+#items li{
+	text-align:center;
+	border:1px solid darkgray;
+	list-style:none;
+	color: #933;
+	font-weight:bold;
+}
+#additem{
+	width:100%;
+}

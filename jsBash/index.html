@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, syntax, parser, bash, interpreter, language, ariel, flesler" />
+	<meta name="description" content="Demo of jsBash. A Bash-like Syntax Interpreter, made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>jsBash - Bash-like Syntax Interpreter</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<link href='css/style.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='js/parser.js'></script>
+	<script type='text/javascript' src='js/parser.base.js'></script>
+	<script type='text/javascript' src='../jsDump/js/jsDump.js'></script>
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js'></script>
+	<script type='text/javascript' src='js/jsBash.js'></script>
+	
+	<!-- Timestamp: 1440348209 -->
+</head>
+<body>
+	<h1>jsBash&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+	<h2 class='title'>Bash-like Syntax Interpreter</h2>		<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a href="../jsDump/">jsDump</a></li>
+			</ul>
+		</div>
+		</div>
+		<div id="screen">
+		<ul id="dump" class="colored">
+			<li>
+				<p class="dump">
+					Welcome, check the sections on the right to learn more.<br />
+					To execute a command, press Enter.<br />
+					To type multi-line commands, hold Shift while you press Enter.<br />
+					Use the command 'clear' to clean the screen.<br />
+					Use pgUp and pgDown to traverse the history.
+				</p>
+			</li>
+		</ul>
+		<span id="pointer" class="colored">$</span>
+		<textarea rows="3" id="source" class="colored"></textarea>
+	</div>	
+	
+	<div class="local_sidebar">
+		<div id="help" class="branch">
+			<h2>Help</h2>
+			<ul>
+				<li>
+					<u>Commands can be</u>: Most <em>Array</em>, <em>String</em>, <em>jQuery</em> and <em>Math object</em> methods.<br />
+					Math and binary operators, '<em>set</em>' returns the argument, '<em>()</em>' runs a function.<br />
+					'<em>lambda</em>' creates a lambda function from a string, and optional arguments.<br />
+					'<em>map</em>' and '<em>each</em>' work on array/hash, check the commands on the right.<br />
+					'<em>dump</em>' shows the output, accepts <em>-c</em>(<strong>c</strong>onsole) or <em>-d</em>(<strong>D</strong>OM), else <em>alert()</em>
+				</li>
+				<li>
+					<u>Arguments can be</u>: Literal <em>arrays</em>, <em>strings</em>, <em>numbers</em>, <em>regexes</em> or <em>hashes</em>.<br />
+					Content wrapped with parens will be eval'd, flags can be used (-x,-y ...)<br />
+					% % define lambda functions on the fly, which arguments are a,b,c,d.<br />
+					The words window,document.body,document,true,false,null are identified.<br />
+					<em>&gt;foo</em> sets the output of a command, into the variable foo.<br />
+					<em>&lt;foo</em> gets the content of the variable, the pipe (|) connects commands.
+				</li>
+			</ul>
+		</div>
+		<div id="scripts" class="branch">
+			<h2>Try these(click)</h2>
+			<ul>
+				<li>add 1 2 &gt;exp; pow 2 &lt;exp | add 1</li>
+				<li>$ document.body | $addClass 'node body' | $fadeOut | $fadeIn</li>
+				<li>$ '#links ul' | $animate {height:'toggle'} 500</li>
+				<li>abs -4 &gt;2 ; random | * 8 | ceil &gt;3 ; add &lt;2 &lt;3 | arr &lt;2 &lt;3</li>
+				<li>$ 'h1' | $slideUp 'fast' | $slideDown 'slow'</li>
+				<li>get -s 'css/style.css' | slice 163 222 | add ' &lt;EOF&gt;'</li>
+				<li>set [/a.*?/,10] | push { key:'value' } | unshift [5]</li>
+				<li>split 'a,b,c,d' ',' | slice 1 -1 | join ' but not '</li>
+				<li>set 1 &gt;a; set 2 &gt;b; add &lt;a &lt;b &gt;c;
+arr &lt;a '+' &lt;b '=' &lt;c | join ' '</li>
+				<li>split 'fedbacihgkj' '' | sort | join ''</li>
+				<li>set %a+b% | () 2 1 | arr | concat [2,1] | reverse</li>
+				<li>arr 1 2 3 | unshift 0 | map %a*2%</li>
+				<li>each {a:1,b:5,c:7} %alert(b+' => '+a)%</li>
+				<li>lambda '"Hi Mr. " + name' 'name' | () 'T'</li>
+				<li>typeof 'lambda' >type | == 'command' | set &lt;type | join ', ' </li>
+			</ul>
+		</div>
+		<div id="commands" class="branch">
+			<h2>Commands(click to open the list)</h2>
+			<ul />			
+		</div>
+	</div>
+	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+	<script type='text/javascript' src='js/init.js'></script>
+
+</body>
+</html>

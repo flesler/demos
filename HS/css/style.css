@@ -1,0 +1,40 @@
+html,body{
+	/*overflow:hidden;*/
+}
+
+pre{
+	width:400px;
+}
+
+#screens{
+	overflow:hidden;
+}
+#screens .screen{
+	float:left;
+}
+
+#api{
+	top:124px;
+	width:235px;
+	background-color:white;
+}
+	#api h2{
+		width:inherit;
+		text-align:center;
+		border:1px black solid;
+		padding:10px 0;
+		color:#933;
+	}
+	#api ul{
+		border:1px black solid;
+		padding-top:10px;
+		width:inherit;
+		height:390px !important;
+		height:450px;
+		overflow-y:auto;
+		overflow-x:hidden;
+	}
+		#api li	{
+			width:inherit;
+			text-align:center;
+		}

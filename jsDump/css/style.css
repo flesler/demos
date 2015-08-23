@@ -1,0 +1,11 @@
+textarea{
+	font-size:12px;
+	height:335px;
+	width:350px;
+	display:inline;
+}
+button{ display:block }
+p{
+	font-size:14px;
+	width:700px;
+}

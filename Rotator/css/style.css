@@ -1,0 +1,12 @@
+.example{
+	border:1px #777 solid;
+	padding:20px;
+	text-align:center;
+	width:200px;
+	margin: 20px 0 0 20px;
+}
+	.example ul{
+		text-align:justify;
+		margin:0;
+		padding-left:80px;
+	}

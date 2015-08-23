@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, jquery, plugins, preload, images, placeholder, rollover, placeholder, loading, callbacks, threshold, sequential, url, onload, onerror, oncomplete, links, versatile, customizable, multifunctional, ariel, flesler" />
+	<meta name="description" content="Demo of jQuery.preload. An advanced multi-functional preloader, that has 4 modes integrated. Each mode suits a different, common situation, made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>jQuery.preload - Placeholder Mode</title>
+	<link rel="shortcut icon" href="http://jquery.com/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<link href='../css/style.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js'></script>
+	<script type='text/javascript' src='../js/jquery.preload-min.js'></script>
+	<script type='text/javascript' src='init.js'></script>
+	
+	<!-- Timestamp: 1440348215 -->
+</head>
+<body>
+	<h1>jQuery.preload&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+	<h2 class='title'>Placeholder Mode</h2>		<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a target="_blank" href="http://flesler.blogspot.com/2008/01/jquerypreload.html">Main blog article</a></li>
+<li><a href="../link/">Link Mode</a></li>
+<li><a href="../rollover/">Rollover Mode</a></li>
+<li><a href="../url/">URL Mode</a></li>
+			</ul>
+		</div>
+		</div>
+		<div id="ph-images">
+		<img src="http://i120.photobucket.com/albums/o171/kitty_of_ice/anime/cat.jpg" />
+		<img src="http://fc.deviantart.com/fs4/i/2004/261/e/f/M_S_Z_O_M_R_by_LimeSphere.jpg" />
+		<img src="http://i9.photobucket.com/albums/a83/killerkat411/bands%20and%20music/guitarheader.jpg" />
+		<img src="http://www.someSite.com/notAnImage.php" />
+		<img src="http://i62.photobucket.com/albums/h101/K34PICS/Nature%20and%20Outdoors/Norway3.jpg" />
+		<img src="http://i90.photobucket.com/albums/k251/ammar456/Blog/funny/ketchup.jpg" />
+		<img src="http://tn3-2.deviantart.com/fs22/300W/f/2008/028/0/6/Blow__wind__blow____by_Kleemass.jpg" />
+		<img src="http://www.someOtherSite.com/NonExistingURL.jpg" />
+		<img src="http://i62.photobucket.com/albums/h101/K34PICS/Nature%20and%20Outdoors/Boat1.jpg" />
+	</div>
+	<div id="summary">
+		<p>Done:&nbsp;<span id="done">0</span>/<span id="total">?</span></p>
+		<p><span id="loaded">0</span>&nbsp;were loaded successfully.</p>
+		<p><span id="failed">0</span>&nbsp;couldn't be loaded.</p>
+		<p>Last loaded:&nbsp;<span id="image-loaded">none</span></p>
+		<p>Loading:&nbsp;<span id="image-next">none</span></p>
+	</div>
+	<div id="code-sample">
+		<h3>Code Sample</h3>
+	<pre >$.preload( '#images img', {
+    placeholder:'placeholder.jpg',
+    notFound:'notfound.jpg'
+});
+       same as
+
+$('#images img').preload({
+    placeholder:'placeholder.jpg',
+    notFound:'notfound.jpg'
+});</pre>
+	</div>
+	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+
+</body>
+</html>

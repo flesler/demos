@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, defaults, functions, arguments, parameters, ariel, flesler" />
+	<meta name="description" content="Demo of Defaults. Default arguments for functions, made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>Defaults</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<link href='css/style.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='js/defaults.js'></script>
+	
+	<!-- Timestamp: 1440349255 -->
+</head>
+<body>
+	<h1>Defaults&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+			<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/defaults-1.0.0.js">Defaults 1.0.0</a></li>
+			</ul>
+		</div>
+		</div>
+		The 3 stooges are:
+	<ul id="list">
+	<script type="text/javascript">
+		var stooges = function( one, two, three ){
+			var text =  [ one, two, three ].join(', ');
+			document.write('<li>' + text + '</li>');
+		}.defaults( 'Larry', 'Curly', 'Moe' );
+		
+		stooges('Aaa','Bbb','Ccc', 'Ddd');
+		stooges('Aaa','Bbb','Ccc');
+		stooges('Aaa','Bbb');
+		stooges('Aaa');
+		stooges();
+	</script>
+	</ul>
+
+	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+
+</body>
+</html>

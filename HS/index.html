@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, haskell, functional, programming curry, functions, ariel, flesler" />
+	<meta name="description" content="Demo of Haskell functions for Javascript. Haskell's functions (with currying)., made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>Haskell functions for Javascript</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<link href='css/style.css' type='text/css' rel='stylesheet' />
+	<link href='http://flesler-blog.googlecode.com/svn/trunk/style.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='js/hs.js'></script>
+	
+	<!-- Timestamp: 1440349255 -->
+</head>
+<body>
+	<h1>Haskell functions for Javascript&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+			<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a target="_blank" href="http://flesler.blogspot.com/2008/11/haskell-functions-for-javascript.html">Blog Article</a></li>
+<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/hs-1.0.0.js">Haskell Functions 1.0.0</a></li>
+			</ul>
+		</div>
+		</div>
+		<p>These are <a href="http://www.zvon.org/other/haskell/Outputprelude/index.html" target="_blank">Haskell's functions</a> ported to javascript.</p>
+	<p>Some are missing and some don't behave exactly the same.</p>
+	<p>You can try them with a console (firebug or others).</p>
+	<br />
+	<p>All functions can be curried!!</p>
+	<p>All list(array) functions do work on regular strings:</p>
+	<pre class="js">filter( isVowel, <span class="string">'hey how are you'</span> ) == <span class="string">'eoaeou'</span>;
+take( <span class="number">5</span>, <span class="string">'abcdefghi'</span> ) == <span class="string">'abcde'</span>;
+maximum( <span class="string">'ajcdbe'</span> ) == <span class="string">'j'</span>;</pre>
+	<p>The function length is called length'</p>
+	<p>Most functions work on objects/maps, the same way as on arrays.</p>
+	<br />
+	<p>To use operator functions:</p>
+	<pre class="js">hs[<span class="string">'+'</span>]( <span class="number">1</span>, <span class="number">2</span> ) == <span class="number">3</span>;
+map( hs[<span class="string">'**'</span>](<span class="number">2</span>), [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] ) == [<span class="number">2</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">16</span>];</pre>
+	<p>hs is a function itself, is specially useful to call operators:</p>
+	<pre class="js">hs(<span class="string">'+'</span>, <span class="number">1</span>, <span class="number">2</span>) == <span class="number">3</span>;
+map( hs(<span class="string">'**'</span>, <span class="number">2</span>), [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] ) == [<span class="number">2</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">16</span>];</pre>
+	<p>hs._ works the same as hs but flips the 2 arguments"</p>
+	<pre class="js">map( hs._(<span class="string">'**'</span>, <span class="number">2</span>), [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] ) == [<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">16</span>];
+filter( hs._(<span class="string">'>'</span>, <span class="number">2</span>), [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] ) == [<span class="number">3</span>,<span class="number">4</span>];</pre>
+	<script type="text/javascript">
+		(function(){
+			var methods = [];
+			for( var method in hs ){
+				if( !Function.prototype[method] )
+					methods.push(method);
+			}
+			document.write('<div id="api" class="sidebar"><h2>Functions</h2><ul><li>' + methods.sort().join('</li><li>') + '</li></ul></div>');
+		})();
+		hs.global(); // Bring them all to global namespace(not required!)
+	</script>
+	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+	<script type='text/javascript' src='/core/console.lite.js'></script>
+
+</body>
+</html>

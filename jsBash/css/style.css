@@ -1,0 +1,89 @@
+body{
+	height:605px;
+}
+.local_sidebar{
+	position:absolute;
+	right:5px;
+	top:200px;
+}
+	.local_sidebar div{
+		padding:20px 10px;		
+		border:1px solid #777;
+		width:440px;
+	}
+	.local_sidebar h2{
+		color:#933;
+		margin:0 0 5px 0;
+		cursor:pointer;
+		font-size:19px;
+	}
+	.local_sidebar ul{
+		overflow:hidden;
+	}
+	.local_sidebar li{
+		list-style:none;
+		width:430px;
+	}
+	.local_sidebar a{
+		color:#69C;
+	}
+.colored{
+	color:green;
+	background-color:black;
+}
+
+#source, #dump{
+	font-size:13px;
+	width:500px;
+	font-family:monospace;
+}
+#source{
+	display:block;
+	margin:5px 0;
+	text-indent:16px;
+	color:#CCC;
+	overflow:hidden;
+}
+
+#screen{
+	position:relative;
+	width:500px;
+}
+	#pointer{
+		font-size:12px;
+		left:5px;
+		position:absolute;
+		top:407px !important;
+		top:409px;
+	}
+#dump{
+	width:inherit;
+	height:400px;
+	overflow:auto;
+}
+	#dump li{
+		padding: 10px 0 0 10px;
+	}
+	#dump p{
+		margin:0;
+	}
+		#dump p.code{
+			font-style:italic;
+			margin-bottom:3px;
+		}
+		#dump p.dump{
+			color:white;
+		}
+
+	.branch li{
+		font-size:10px;
+		background-color:#EEE;
+		padding:2px;
+		margin: 5px 0;
+	}
+	#scripts ul{
+		cursor:pointer;
+	}
+	#commands ul{
+		text-align:center;
+	}

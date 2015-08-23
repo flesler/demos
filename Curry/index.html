@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="javascript, curry, functions, ariel, flesler" />
+	<meta name="description" content="Demo of Curry. A small script to add currying to functions., made by Ariel Flesler." />
+	<meta name="robots" content="all" />
+	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
+	<meta name="copyright" content="(c) 2007-2008 Ariel Flesler">
+	<title>Curry</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link href='/base.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='js/Curry.js'></script>
+	
+	<!-- Timestamp: 1440349255 -->
+</head>
+<body>
+	<h1>Curry&nbsp;<strong>by Ariel Flesler</strong></h1>
+	<div class="sidebar">
+			<div id="links">
+			<h3>Links</h3>
+			<ul>
+			<li><a target="_blank" href="http://flesler-plugins.googlecode.com/files/Curry-1.0.1.js">Download(1.0.1)</a></li>
+<li><a href="../HS/">Haskell Functions</a></li>
+			</ul>
+		</div>
+		</div>
+		<link href='/core/SyntaxHighlighter.css' type='text/css' rel='stylesheet' />
+	<script type='text/javascript' src='/core/shCore.js'></script>
+	<script type='text/javascript' src='/core/shBrushJScript.js'></script>
+
+		<pre class='javascript:nocontrols' name='code_1'>// Check http://demos.flesler.com/Curry/js/Curry.js for the curry() function
+// These are some examples of currying application
+// They were also executed so you can try them on a console
+
+// General
+var compose = curry(function( f, g, x, y ){
+	return g( x, f(y) );
+});	
+var delegate = curry(function( f, v ){
+	f(v);
+});
+
+// Math
+var sum = curry(function( x, y ){
+	return x + y;
+});
+var inc = sum(1);
+var dec = sum(-1);
+
+var prod = curry(function( x, y ){
+	return x * y;
+});
+var negate = prod(-1);		
+var sub = compose(negate, sum);
+var inv = function( x ){
+	return 1/x;
+};
+var div = compose(inv, prod);
+
+// DOM		
+var attr = curry(function( elem, key, value ){
+	elem[key] = value;
+});
+var setCookie = attr(document,'cookie');
+setCookie('foo=bar;');
+
+// Arrays
+var each = curry(function( f, list ){
+	for( var i=0; i &lt; list.length; i++ )
+		f( list[i], i );
+});
+var map = curry(function( f, list ){
+	var copy = [];
+	each(function(e, i){
+		copy[i] = f(e);
+	}, list );
+	return copy;
+});
+var reduce = curry(function( f, accum, list ){
+	each(function( e ){
+		return accum = f( accum, e );
+	}, list );
+	return accum;
+});
+
+// f.e: incAll( [1,2,3] ) --&gt; [2,3,4]
+var incAll = map( inc );
+var decAll = map( dec );
+var doubleAll = map( prod(2) );
+var alertList = each( alert );
+var sumList = reduce( sum, 0 );
+var concat = reduce( sum, '' );
+var length = reduce( inc, 0 );</pre>
+		<script type='text/javascript'>
+			dp.SyntaxHighlighter.HighlightAll('code_1');
+		</script>	<script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+	<script type='text/javascript' src='/ga/tracker.js'></script>
+	<script type='text/javascript' src='js/init.js'></script>
+
+</body>
+</html>
