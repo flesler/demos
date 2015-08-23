@@ -38,3 +38,135 @@ pre{
 			width:inherit;
 			text-align:center;
 		}
+
+span.string{ color:#36C; }
+span.number{ color:red; }
+span.regex{ color:#282; }
+span.keyword{ color:#306;font-weight:bold; }
+span.comment{ font-weight:bolder;color:#666; }
+span.method{ color:#79D; }
+span.class{ 
+  color:darkgreen;
+  font-weight:bolder;
+}
+span.parenthesis{ font-weight:bolder }
+span.tab{  padding:0pt 24px 0 0; }
+span.new{ 
+  color:red;
+  font-size:10px;
+  font-weight:normal;
+  letter-spacing:-1px;
+  margin-left:3px;
+  display:inline;
+}
+span.small{ font-size:10px; }
+span.dw-tip{ 
+   margin-left:3px;
+   font-size:9px;
+}
+pre.js, code.js{
+ background:#EEE;
+ border:1px #999 solid;
+ padding:4px 4px 4px 12px;
+ font-size:13px;
+}
+h4,h5{ 
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#main-wrapper ul{ 
+  margin-top:15px;
+  margin-bottom:15px;
+}
+.feed-links{
+  visibility:hidden;
+}
+#categories-list ul{
+  margin: 1px 0;
+}
+#categories-list h3{
+  margin:5px 0;
+  font-size:12px;
+}
+#categories-list ul li{
+  padding-left:12px;
+}
+h2.title{
+  height:30px;
+}
+h5.setting, h6.setting{
+  display:inline;
+  margin-right:2px !important;
+  margin-right:6px;
+}
+.sidelink{
+  margin:5px 0 6px 10px;
+}
+.sidelink img{
+  vertical-align:middle;
+  border:0;
+  margin-right:4px;
+  width:16px;
+  height:16px;
+}
+.marleft{
+  margin-left:5px;
+}
+div.pds-question-top{
+  font-family:'Lucida Grande','Trebuchet MS';
+  font-size: 130%;
+}
+div.pds-vote{
+  padding-bottom:0;
+}
+div.pds-vote a{
+  border:0;
+}
+div.pds-answer-feedback{
+  height:15px;
+}
+ol.mine{
+  padding: 2px 0 0 13px;
+  margin:0;
+}
+
+/* js specific */
+/* Category based navigation */
+
+.js #categories-list h3{
+  cursor:pointer;
+}
+.js #categories-list ul{
+  display:none;
+}
+.js #categories-list li{
+  background: url(http://lh5.ggpht.com/aflesler/SFrmcEmiiDI/AAAAAAAAAFo/HMlQ0J6eUiM/collapse.gif.jpg) no-repeat left 3px;
+}
+.js #categories-list ul li{
+  background: url(http://www.blogblog.com/tictac_blue/tictac_blue.gif) no-repeat left 5px;
+}
+
+/* Comments */
+#comments-block{
+	margin-bottom:30px;
+}
+.js_collapse .comment-author{
+	position:relative;
+	border-top:1px #CCC solid;
+}
+#show-all{
+	position:absolute;
+	right:30px;
+	top:38px;
+}
+.js_collapse .comment-body, .js_collapse .comment-footer{
+   display:none;
+}
+#comments-block a.show-hide{
+	display:none;
+}
+#comments-block.js_collapse a.show-hide{
+	display:inline;
+	position:absolute;
+	right:5px;
+}

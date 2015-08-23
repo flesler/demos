@@ -1,6 +1,6 @@
 /**
  * jQuery.Rule - Css Rules manipulation, the jQuery way.
- * Copyright (c) 2007-2008 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2015 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
  * Date: 02/27/2008
  * @author Ariel Flesler

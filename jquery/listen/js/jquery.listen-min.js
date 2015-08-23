@@ -1,6 +1,6 @@
 /**
  * jQuery.Listen - Light and fast event handling, using event delegation.
- * Copyright (c) 2007-2008 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
+ * Copyright (c) 2007-2015 Ariel Flesler - aflesler(at)gmail(dot)com | http://flesler.blogspot.com
  * Dual licensed under MIT and GPL.
  * Date: 3/7/2008
  * http://flesler.blogspot.com/2007/10/jquerylisten.html
