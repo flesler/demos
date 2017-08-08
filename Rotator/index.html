@@ -5,15 +5,13 @@
 	<meta name="keywords" content="javascript, rotate, rotator, collections, class, object, ariel, flesler" />
 	<meta name="description" content="Demo of Rotator. A generic class to rotate different kind of collections, made by Ariel Flesler." />
 	<meta name="robots" content="all" />
-	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
-	<meta name="copyright" content="(c) 2007-2015 Ariel Flesler">
+	<meta name="author" content="Ariel Flesler - https://github.com/flesler" />
+	<meta name="copyright" content="(c) 2007 Ariel Flesler">
 	<title>Rotator</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link href='/base.css' type='text/css' rel='stylesheet' />
 	<link href='css/style.css' type='text/css' rel='stylesheet' />
 	<script type='text/javascript' src='js/rotator-min.js'></script>
-	
-	<!-- Timestamp: 1440348210 -->
 </head>
 <body>
 	<h1>Rotator&nbsp;<strong>by Ariel Flesler</strong></h1>
@@ -40,28 +38,28 @@
 			<li>eight</li>
 		</ul>
 	</div>
-	
-	<div class="example">	
+
+	<div class="example">
 		<p id="semaphore">-1234567</p>
 	</div>
-	
-	
+
+
 	<div class="example">
 		<img src="red.jpg"  />
 		<img src="yellow.jpg"  />
 		<img src="green.jpg"  />
 	</div>
-	
+
 	<script type="text/javascript">
 		var semaphore = document.getElementById('semaphore'),
 			numbers = document.getElementById('numbers');
-		
+
 		var nodeRotator = new Rotator( numbers.getElementsByTagName('li'), function( li, index ){
 			this.parentNode.insertBefore(li,this); //rotate (visually) the matched dom elements
 		});
 		var stringRotator = new Rotator( '-1234567' );//rotate the characters of this string
 		var sourceRotator = new Rotator( document.getElementsByTagName('img'), 'src','src' );//rotate the sources of the images
-		
+
 		setInterval(function(){
 			nodeRotator.right();
 			stringRotator.left();

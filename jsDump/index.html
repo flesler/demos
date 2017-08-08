@@ -5,15 +5,13 @@
 	<meta name="keywords" content="javascript, script, dump, pretty, object, function, window, document, nodes, strings, numbers, regexp, dates, ariel, flesler" />
 	<meta name="description" content="Demo of jsDump.  A small JS Object, to parse Javascript data into pretty strings, made by Ariel Flesler." />
 	<meta name="robots" content="all" />
-	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
-	<meta name="copyright" content="(c) 2007-2015 Ariel Flesler">
+	<meta name="author" content="Ariel Flesler - https://github.com/flesler" />
+	<meta name="copyright" content="(c) 2007 Ariel Flesler">
 	<title>jsDump</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link href='/base.css' type='text/css' rel='stylesheet' />
 	<link href='css/style.css' type='text/css' rel='stylesheet' />
 	<script type='text/javascript' src='js/jsDump.js'></script>
-	
-	<!-- Timestamp: 1440348209 -->
 </head>
 <body>
 	<h1>jsDump&nbsp;<strong>by Ariel Flesler</strong></h1>
@@ -37,9 +35,9 @@
 	{ a : 5, '1' : 'foo' },
 	/^[ab]+$/g,
 	new RegExp('x(.*?)z','ig'),
-	alert, 
+	alert,
 	function fn( x, y, z ){
-		return x + y; 
+		return x + y;
 	},
 	true,
 	undefined,
@@ -52,7 +50,7 @@
 	<textarea id="parsed"></textarea>
 	<button id="dump">dump</button>
 
-	<script type="text/javascript">	
+	<script type="text/javascript">
 	document.getElementById('dump').onclick = function(){
 		// All this is specifically for the demo
 		var text = document.getElementById('source').value;

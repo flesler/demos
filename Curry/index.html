@@ -5,14 +5,12 @@
 	<meta name="keywords" content="javascript, curry, functions, ariel, flesler" />
 	<meta name="description" content="Demo of Curry. A small script to add currying to functions., made by Ariel Flesler." />
 	<meta name="robots" content="all" />
-	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
-	<meta name="copyright" content="(c) 2007-2015 Ariel Flesler">
+	<meta name="author" content="Ariel Flesler - https://github.com/flesler" />
+	<meta name="copyright" content="(c) 2007 Ariel Flesler">
 	<title>Curry</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link href='/base.css' type='text/css' rel='stylesheet' />
 	<script type='text/javascript' src='js/Curry.js'></script>
-	
-	<!-- Timestamp: 1440349255 -->
 </head>
 <body>
 	<h1>Curry&nbsp;<strong>by Ariel Flesler</strong></h1>
@@ -36,7 +34,7 @@
 // General
 var compose = curry(function( f, g, x, y ){
 	return g( x, f(y) );
-});	
+});
 var delegate = curry(function( f, v ){
 	f(v);
 });
@@ -51,14 +49,14 @@ var dec = sum(-1);
 var prod = curry(function( x, y ){
 	return x * y;
 });
-var negate = prod(-1);		
+var negate = prod(-1);
 var sub = compose(negate, sum);
 var inv = function( x ){
 	return 1/x;
 };
 var div = compose(inv, prod);
 
-// DOM		
+// DOM
 var attr = curry(function( elem, key, value ){
 	elem[key] = value;
 });

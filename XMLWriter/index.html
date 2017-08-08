@@ -5,15 +5,13 @@
 	<meta name="keywords" content="javascript, xml, writer, .NET, class, string, object, ariel, flesler" />
 	<meta name="description" content="Demo of XMLWriter. A Javascript class to generate XML content., made by Ariel Flesler." />
 	<meta name="robots" content="all" />
-	<meta name="author" content="Ariel Flesler, aflesler(at)gmail(dot)com" />
-	<meta name="copyright" content="(c) 2007-2015 Ariel Flesler">
+	<meta name="author" content="Ariel Flesler - https://github.com/flesler" />
+	<meta name="copyright" content="(c) 2007 Ariel Flesler">
 	<title>XMLWriter</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link href='/base.css' type='text/css' rel='stylesheet' />
 	<link href='css/style.css' type='text/css' rel='stylesheet' />
 	<script type='text/javascript' src='js/XMLWriter-min.js'></script>
-	
-	<!-- Timestamp: 1440348210 -->
 </head>
 <body>
 	<h1>XMLWriter&nbsp;<strong>by Ariel Flesler</strong></h1>
@@ -48,7 +46,7 @@ xw.writeStartElement( 'items' );
     xw.writeEndElement();
     xw.writeElementString('description', 'a save button');
   xw.writeEndElement();
-  
+
   xw.writeComment('image');
   xw.writeStartElement('item');
     xw.writeAttributeString( 'id', 'item-2');
@@ -58,7 +56,7 @@ xw.writeStartElement( 'items' );
     xw.writeEndElement();
     xw.writeElementString('description', 'a pic of myself!');
   xw.writeEndElement();
-  
+
   xw.writeComment('link');
   xw.writeStartElement('item');
     xw.writeAttributeString( 'id', 'item-3');
@@ -68,7 +66,7 @@ xw.writeStartElement( 'items' );
     xw.writeEndElement();
     xw.writeElementString('description', 'a link to Google');
   xw.writeEndElement();
-  
+
 xw.writeEndElement();
 xw.writeEndDocument();
 </pre>
