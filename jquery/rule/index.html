@@ -5,7 +5,7 @@
 	<meta name="keywords" content="javascript, jquery, plugins, rule, css, dom, effects, animations, manipulation, objects, ariel, flesler" />
 	<meta name="description" content="Demo of jQuery.rule. A jQuery plugin to create, traverse and manipulate CSS Rules the "jQuery way", made by Ariel Flesler." />
 	<meta name="robots" content="all" />
-	<meta name="author" content="Ariel Flesler - https://github.com/flesler" />
+	<meta name="author" content="Ariel Flesler" />
 	<meta name="copyright" content="(c) 2007 Ariel Flesler">
 	<title>jQuery.rule</title>
 	<link rel="shortcut icon" href="http://jquery.com/favicon.ico" type="image/x-icon" />
@@ -16,27 +16,27 @@
 	<script type='text/javascript' src='js/init.js'></script>
 <style type="text/css">
 		body{ width:100%; }
-	
+
 		p{ color:blue; }
-		
+
 		span{ color:#C93; }
-		
+
 		#content li{ margin-top:15px; }
-		
+
 		#queries{ background-color:#CCC; }
-		
-		a{ font-weight:bolder; }		
-		
+
+		a{ font-weight:bolder; }
+
 		/* rules using asterisk don't work well in IE */
-		
-		body{ 
+
+		body{
 			font-family: Times New Roman, serif, Arial;
 			line-height:19px;
-		}	
-		
+		}
+
 		h3{  }
 	</style>
-	
+
 
 </head>
 <body>
@@ -62,7 +62,7 @@
 				<li>$.rule('textarea{}').append('background:#FFC').appendTo('link');</li>
 				<li>$.rule('textarea','link:eq(1)').remove();</li>
 				<li>$.rule('span{font-size:30px;}').appendTo('link:eq(1)');</li>
-				<li>$.rule('span','link:eq(1)').remove();</li>				
+				<li>$.rule('span','link:eq(1)').remove();</li>
 				<li>$.rule('button{}').appendTo('link:eq(1)').css('background','darkgreen');</li>
 				<li>$.rule('button','link:eq(1)').remove();</li>
 				<li>$.rule('a').animate({letterSpacing:20}).animate({letterSpacing:0});</li>
