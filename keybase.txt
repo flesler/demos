@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/flesler
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://demos.flesler.com
+  * I am flesler (https://keybase.io/flesler) on keybase.
+  * I have a public key ASDTQ7nAI0h6A30viv-fxCdWf_B0Y_wlkKYWVJ0eSCLXuwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d343b9c023487a037d2f8aff9fc427567ff07463fc2590a616549d1e4822d7bb0a",
+      "host": "keybase.io",
+      "kid": "0120d343b9c023487a037d2f8aff9fc427567ff07463fc2590a616549d1e4822d7bb0a",
+      "uid": "2d75cd5231a4d94b1342b03177f50119",
+      "username": "flesler"
+    },
+    "merkle_root": {
+      "ctime": 1568037604,
+      "hash": "e1d3840a2b55e2ffa60aca490919348b326a8db3e6b0459cafb6f36c3aca55ab5a9dcb7daa591e04e0258743d4b2663e5015770ab9596eadce8b1242a393519a",
+      "hash_meta": "3137af8bce8cfca0eed242c650bb29e973ddc87fb43dad295783dea4a12c3550",
+      "seqno": 6207240
+    },
+    "service": {
+      "entropy": "EsgBx67E/gCpXDRW+zEN4E+4",
+      "hostname": "demos.flesler.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.4.0"
+  },
+  "ctime": 1568037627,
+  "expire_in": 504576000,
+  "prev": "44f9e2bec705c6793b283c10f4a31f1c9faf837f3a5807bda5e29c04cd7a8ef8",
+  "seqno": 11,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg00O5wCNIegN9L4r/n8QnVn/wdGP8JZCmFlSdHkgi17sKp3BheWxvYWTESpcCC8QgRPnivscFxnk7KDwQ9KMfHJ+vg386WAe9peKcBM16jvjEIMmB5Bs3iPoE16vVeqIoQYUbXnnR3ShoNSlCsB0dj93TAgHCo3NpZ8RA7t8dxhrDKT6Ea42qGH36Ep1gbhj5PQEqQuEIgojt7WLDCzi87WS38zkGlw3TKzOMojrqDD49mILUjTqXGsChB6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEILq0AV+iBWl3KDXN+ZmiekspVaf9BSJciuA60Og75i9vo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/flesler
+
+==================================================================
