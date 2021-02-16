@@ -1,3 +1,3 @@
 # demos.flesler.com
 
-Code on branch gh-pages
+Site: https://demos.flesler.com/
