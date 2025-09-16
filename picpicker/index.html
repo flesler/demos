@@ -1,0 +1,544 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta name="keywords"
+    content="images,photos,browser-extension,image-extraction,image-downloader,bulk-download,save-images,photo-extractor,image-scraper,download-photos,extract-images,mass-download,website-images,image-saver, ariel, flesler" />
+  <meta name="description"
+    content="Privacy-first browser extension to extract all images from any webpage with one click" />
+  <meta name="robots" content="all" />
+  <meta name="author" content="Ariel Flesler" />
+  <meta name="flattr:id" content="w2l7z6">
+  <meta name="copyright" content="(c) 2025 Ariel Flesler">
+  <title>PicPicker</title>
+  <link rel="shortcut icon" href="https://github.com/favicon.ico" type="image/x-icon" />
+  <style type="text/css">
+    svg {
+    display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>PicPicker&nbsp;<strong>by Ariel Flesler</strong></h1>
+  <div
+    class="Box-sc-g0xbh4-0 js-snippet-clipboard-copy-unpositioned DirectoryRichtextContent-module__SharedMarkdownContent--BTKsc"
+    data-hpc="true">
+    <article class="markdown-body entry-content container-lg" itemprop="text">
+      <p dir="auto"><a href="https://chromewebstore.google.com/detail/picpicker/mkiilhjbheleblbeegpbpnffkinapakn"
+          rel="nofollow"><img
+            src="https://camo.githubusercontent.com/9393142e6b7645a1191a1b8e50a31cf5432dd1bcf81e0e108a2a20de71691f32/68747470733a2f2f696d672e736869656c64732e696f2f6368726f6d652d7765622d73746f72652f762f6d6b69696c686a6268656c65626c626565677062706e66666b696e6170616b6e3f6c6162656c3d4368726f6d6525323057656225323053746f7265"
+            alt="Chrome Web Store"
+            data-canonical-src="https://img.shields.io/chrome-web-store/v/mkiilhjbheleblbeegpbpnffkinapakn?label=Chrome%20Web%20Store"
+            style="max-width: 100%;"></a>
+        <a href="https://chromewebstore.google.com/detail/picpicker/mkiilhjbheleblbeegpbpnffkinapakn" rel="nofollow"><img
+            src="https://camo.githubusercontent.com/11e888c2a011cec868e5ea8fdd8a0a268950333369e1c2dc94f617f6250a329a/68747470733a2f2f696d672e736869656c64732e696f2f6368726f6d652d7765622d73746f72652f726174696e672f6d6b69696c686a6268656c65626c626565677062706e66666b696e6170616b6e"
+            alt="Chrome Web Store Rating"
+            data-canonical-src="https://img.shields.io/chrome-web-store/rating/mkiilhjbheleblbeegpbpnffkinapakn"
+            style="max-width: 100%;"></a>
+        <a href="https://addons.mozilla.org/firefox/addon/picpicker/" rel="nofollow"><img
+            src="https://camo.githubusercontent.com/645c8e3955946bc8b5842394e1c801d93e8a45fbe8b4fe276c5d23aea7ee9584/68747470733a2f2f696d672e736869656c64732e696f2f616d6f2f762f7069637069636b65723f6c6162656c3d46697265666f782532304164642d6f6e"
+            alt="Mozilla Add-on" data-canonical-src="https://img.shields.io/amo/v/picpicker?label=Firefox%20Add-on"
+            style="max-width: 100%;"></a>
+        <a href="https://addons.mozilla.org/firefox/addon/picpicker/" rel="nofollow"><img
+            src="https://camo.githubusercontent.com/7ff118e328f4883a972f2d725f4e133e4ae434a3d9fe257810d068f122cc3c6b/68747470733a2f2f696d672e736869656c64732e696f2f616d6f2f726174696e672f7069637069636b6572"
+            alt="Mozilla Add-on Rating" data-canonical-src="https://img.shields.io/amo/rating/picpicker"
+            style="max-width: 100%;"></a>
+        <a href="https://github.com/flesler/picpicker/blob/main/LICENSE"><img
+            src="https://camo.githubusercontent.com/75fedcd0be45b3a29d92b7e4bc74ea867131f0570579176b35b3b93e4f15e63d/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f666c65736c65722f7069637069636b6572"
+            alt="License" data-canonical-src="https://img.shields.io/github/license/flesler/picpicker"
+            style="max-width: 100%;"></a>
+      </p>
+      <div class="markdown-heading" dir="auto">
+        <h1 tabindex="-1" class="heading-element" dir="auto">PicPicker - Universal Image Extractor</h1><a
+          id="user-content-picpicker---universal-image-extractor" class="anchor"
+          aria-label="Permalink: PicPicker - Universal Image Extractor" href="#picpicker---universal-image-extractor"><svg
+            class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <p dir="auto">A powerful browser extension that extracts <strong>all images</strong> from any webpage with one
+        click. Works universally on any website - no domain restrictions. Extract images from img tags, CSS backgrounds,
+        SVG elements, video posters, and even lazy-loaded content.</p>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">✨ Key Features</h2><a id="user-content--key-features"
+          class="anchor" aria-label="Permalink: ✨ Key Features" href="#-key-features"><svg class="octicon octicon-link"
+            viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <p dir="auto">🌐 <strong>Universal</strong> - Works on ANY website (Pinterest, Instagram, news sites, etc.)<br>
+        🔍 <strong>Comprehensive</strong> - Extracts from img tags, backgrounds, SVG, video posters, srcset, data-*
+        attributes<br>
+        👁️ <strong>Viewport Detection</strong> - Shows which images were visible when extracted<br>
+        🎯 <strong>Advanced Selection</strong> - Shift+Click ranges, Ctrl+Click toggle, select all/none<br>
+        ⚡ <strong>Burst Downloads</strong> - Download multiple selected images simultaneously<br>
+        🔍 <strong>Text Search</strong> - Search alt text when enabled<br>
+        ⚙️ <strong>Customizable</strong> - Filter by size, format, source type, visibility<br>
+        🎨 <strong>Modern UI</strong> - Responsive grid, lightbox preview, hover tooltips</p>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">🔒 Privacy-First Design</h2><a
+          id="user-content--privacy-first-design" class="anchor" aria-label="Permalink: 🔒 Privacy-First Design"
+          href="#-privacy-first-design"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <p dir="auto">🛡️ <strong>"On Click" Permissions</strong> - Only runs when you explicitly activate it<br>
+        🚫 <strong>No Background Monitoring</strong> - Cannot read websites unless you click the extension<br>
+        📱 <strong>Local Processing</strong> - All image data stays in your browser<br>
+        🔐 <strong>No Data Collection</strong> - No analytics, tracking, or external servers<br>
+        ⚡ <strong>Instant Access</strong> - No account required, works offline</p>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">📸 Screenshots</h2><a id="user-content--screenshots"
+          class="anchor" aria-label="Permalink: 📸 Screenshots" href="#-screenshots"><svg class="octicon octicon-link"
+            viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Popup Settings</h3>
+      </div>
+      <p align="center" dir="auto">
+        <a target="_blank" rel="noopener noreferrer"
+          href="https://github.com/flesler/picpicker/blob/main/images/screenshot1.png"><img
+            src="https://github.com/flesler/picpicker/raw/main/images/screenshot1.png" alt="PicPicker Popup Settings" width="100%"
+            style="max-width: 50%;"></a>
+        </p>
+      <p dir="auto"><em>Clean popup interface with extraction settings - minimum size, backgrounds, SVG, alt text
+          options</em></p>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Image Grid Results</h3>
+      </div>
+      <p align="center" dir="auto">
+        <a target="_blank" rel="noopener noreferrer"
+          href="https://github.com/flesler/picpicker/blob/main/images/screenshot2.png"><img
+            src="https://github.com/flesler/picpicker/raw/main/images/screenshot2.png" alt="PicPicker Results Grid" width="100%"
+            style="max-width: 50%;"></a>
+        </p>
+        <p dir="auto"><em>Responsive image grid with filtering, sorting, and bulk selection features</em></p>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Lightbox Preview</h3>
+      </div>
+      <p align="center" dir="auto">
+        <a target="_blank" rel="noopener noreferrer"
+          href="https://github.com/flesler/picpicker/blob/main/images/screenshot3.png"><img
+            src="https://github.com/flesler/picpicker/raw/main/images/screenshot3.png" alt="PicPicker Lightbox" width="100%"
+            style="max-width: 50%;"></a>
+        </p>
+        <p dir="auto"><em>Full-size image preview with metadata, download, and copy URL options</em></p>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">🚀 Quick Start</h2><a id="user-content--quick-start"
+          class="anchor" aria-label="Permalink: 🚀 Quick Start" href="#-quick-start"><svg class="octicon octicon-link"
+            viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Installation</h3>
+      </div>
+      <ol dir="auto">
+        <li>Download from Chrome Web Store <em>(coming soon)</em></li>
+        <li>Or build from source (see Development section)</li>
+      </ol>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Usage</h3>
+      </div>
+      <ol dir="auto">
+        <li><strong>Visit any website</strong> with images (works everywhere!)</li>
+        <li><strong>Click the extension icon</strong> or use <code>Ctrl+Shift+I</code></li>
+        <li><strong>Choose extraction settings</strong> - size filters, backgrounds, alt text</li>
+        <li><strong>Click "Extract Images"</strong> - opens new tab with all found images</li>
+        <li><strong>Filter, select, and download</strong> - use the powerful grid interface</li>
+      </ol>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Image Sources Supported</h3><a
+          id="user-content-image-sources-supported" class="anchor" aria-label="Permalink: Image Sources Supported"
+          href="#image-sources-supported"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <ul dir="auto">
+        <li>🖼️ <strong>IMG tags</strong> - Standard <code>&lt;img src=""&gt;</code> elements</li>
+        <li>🎨 <strong>CSS Backgrounds</strong> - <code>background-image</code> properties</li>
+        <li>🎭 <strong>SVG Graphics</strong> - Converted to downloadable formats</li>
+        <li>🎬 <strong>Video Posters</strong> - Thumbnail images from <code>&lt;video poster=""&gt;</code></li>
+        <li>📱 <strong>Responsive Images</strong> - <code>srcset</code> attributes with multiple resolutions</li>
+        <li>🔄 <strong>Lazy Loading</strong> - <code>data-src</code>, <code>data-original</code>, and 16+ data-*
+          patterns</li>
+        <li>👁️ <strong>Viewport Detection</strong> - Tracks which images were visible during extraction</li>
+        </ul>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">🛠️ Development</h2><a id="user-content-️-development"
+          class="anchor" aria-label="Permalink: 🛠️ Development" href="#️-development"><svg class="octicon octicon-link"
+            viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Build from Source</h3>
+      </div>
+      <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto">
+        <pre><span class="pl-c"><span class="pl-c">#</span> Clone and install dependencies</span>
+git clone https://github.com/flesler/picpicker
+<span class="pl-c1">cd</span> picpicker
+npm install
+
+<span class="pl-c"><span class="pl-c">#</span> Run full test suite and build</span>
+npm run prepack</pre>
+<div class="zeroclipboard-container">
+  <clipboard-copy aria-label="Copy"
+    class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+    data-copy-feedback="Copied!" data-tooltip-direction="w" value="# Clone and install dependencies
+git clone https://github.com/flesler/picpicker
+cd picpicker
+npm install
+
+# Run full test suite and build
+npm run prepack" tabindex="0" role="button">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-copy js-clipboard-copy-icon">
+              <path
+                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+              </path>
+              <path
+                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+              </path>
+            </svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+              <path
+                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+              </path>
+            </svg>
+            </clipboard-copy>
+        </div>
+        </div>
+        <div class="markdown-heading" dir="auto">
+          <h3 tabindex="-1" class="heading-element" dir="auto">Load in Chrome</h3>
+        </div>
+        <ol dir="auto">
+          <li>Open <code>chrome://extensions/</code></li>
+          <li>Enable "Developer mode"</li>
+          <li>Click "Load unpacked"</li>
+          <li>Select the <code>dist/</code> folder (NOT project root)</li>
+        </ol>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">📁 Project Structure</h2><a id="user-content--project-structure"
+          class="anchor" aria-label="Permalink: 📁 Project Structure" href="#-project-structure"><svg
+            class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+        <pre class="notranslate"><code>src/
+├── background.ts      # Service worker - tab management, session storage
+├── content.ts         # DOM scanner - extracts images from any webpage
+├── popup.ts          # Settings interface - filters, extraction options
+├── results.ts        # Results page - grid display, filtering, downloads
+├── types.ts          # TypeScript interfaces for images and settings
+├── utils.ts          # Shared utilities - logging, storage, helpers
+└── public/
+    ├── manifest.json  # Extension manifest (universal domain support)
+    ├── popup.html     # Settings popup UI
+    ├── results.html   # Image grid results page
+    └── icons/         # Extension icons (16px, 48px, 128px)
+</code></pre>
+<div class="zeroclipboard-container">
+  <clipboard-copy aria-label="Copy"
+    class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+    data-copy-feedback="Copied!" data-tooltip-direction="w" value="src/
+├── background.ts      # Service worker - tab management, session storage
+├── content.ts         # DOM scanner - extracts images from any webpage
+├── popup.ts          # Settings interface - filters, extraction options
+├── results.ts        # Results page - grid display, filtering, downloads
+├── types.ts          # TypeScript interfaces for images and settings
+├── utils.ts          # Shared utilities - logging, storage, helpers
+└── public/
+    ├── manifest.json  # Extension manifest (universal domain support)
+    ├── popup.html     # Settings popup UI
+    ├── results.html   # Image grid results page
+    └── icons/         # Extension icons (16px, 48px, 128px)" tabindex="0" role="button">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-copy js-clipboard-copy-icon">
+              <path
+                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+              </path>
+              <path
+                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+              </path>
+            </svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+              <path
+                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+              </path>
+            </svg>
+            </clipboard-copy>
+        </div>
+        </div>
+        <div class="markdown-heading" dir="auto">
+          <h2 tabindex="-1" class="heading-element" dir="auto">🛠️ Available Scripts</h2><a
+            id="user-content-️-available-scripts" class="anchor" aria-label="Permalink: 🛠️ Available Scripts"
+            href="#️-available-scripts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+              height="16" aria-hidden="true">
+              <path
+                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+              </path>
+            </svg></a>
+        </div>
+        <markdown-accessiblity-table data-catalyst="">
+          <table>
+            <thead>
+              <tr>
+                <th>Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>npm run build</code></td>
+                <td>Build optimized extension for Chrome</td>
+              </tr>
+              <tr>
+                <td><code>npm run build:firefox</code></td>
+                <td>Build for Firefox (<code>FIREFOX=1 npm run build</code>)</td>
+              </tr>
+              <tr>
+                <td><code>npm run prepack</code></td>
+                <td><strong>Complete validation</strong> - lint + type check + build + zip</td>
+              </tr>
+              <tr>
+                <td><code>npm run lint:full</code></td>
+                <td>TypeScript check + ESLint validation</td>
+              </tr>
+              <tr>
+                <td><code>npm run lint:fix</code></td>
+                <td>Auto-fix linting issues</td>
+              </tr>
+            </tbody>
+        </table>
+        </markdown-accessiblity-table>
+        <div class="markdown-heading" dir="auto">
+          <h2 tabindex="-1" class="heading-element" dir="auto">🏗️ Technical Architecture</h2><a
+            id="user-content-️-technical-architecture" class="anchor" aria-label="Permalink: 🏗️ Technical Architecture"
+            href="#️-technical-architecture"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+              height="16" aria-hidden="true">
+              <path
+                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+              </path>
+            </svg></a>
+        </div>
+        <div class="markdown-heading" dir="auto">
+          <h3 tabindex="-1" class="heading-element" dir="auto">Privacy-First Permission Model</h3><a
+            id="user-content-privacy-first-permission-model" class="anchor"
+            aria-label="Permalink: Privacy-First Permission Model" href="#privacy-first-permission-model"><svg
+              class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+              <path
+                d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+              </path>
+            </svg></a>
+        </div>
+        <ul dir="auto">
+          <li><strong>"activeTab" permissions</strong> - Only access when user explicitly clicks</li>
+          <li><strong>Dynamic injection</strong> - Content script loaded only when needed</li>
+          <li><strong>No persistent monitoring</strong> - Cannot read websites in background</li>
+          <li><strong>Session-based data</strong> - Image data cleared when results tab closes</li>
+        </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Universal Domain Support</h3><a
+          id="user-content-universal-domain-support" class="anchor" aria-label="Permalink: Universal Domain Support"
+          href="#universal-domain-support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <ul dir="auto">
+        <li><strong>No restrictions</strong> - Works on any website when activated</li>
+        <li><strong>Cross-browser</strong> - Chrome + Firefox support via webextension-polyfill</li>
+        <li><strong>Manifest V3</strong> - Modern service worker architecture</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Image Extraction Engine</h3><a
+          id="user-content-image-extraction-engine" class="anchor" aria-label="Permalink: Image Extraction Engine"
+          href="#image-extraction-engine"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <ul dir="auto">
+        <li><strong>DOM Scanner</strong> - <code>querySelectorAll('*')</code> for comprehensive coverage</li>
+        <li><strong>Multi-source</strong> - IMG tags, CSS backgrounds, SVG, video posters</li>
+        <li><strong>Advanced parsing</strong> - srcset attributes, data-* lazy loading patterns</li>
+        <li><strong>Performance optimized</strong> - Short JSON keys, efficient filtering</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Data Flow Architecture</h3><a
+          id="user-content-data-flow-architecture" class="anchor" aria-label="Permalink: Data Flow Architecture"
+          href="#data-flow-architecture"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="snippet-clipboard-content notranslate position-relative overflow-auto">
+        <pre class="notranslate"><code>Content Script → Background → Results Tab
+     ↓              ↓             ↓
+DOM Scanning → Session Storage → Grid Display
+</code></pre>
+<div class="zeroclipboard-container">
+  <clipboard-copy aria-label="Copy"
+    class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center"
+    data-copy-feedback="Copied!" data-tooltip-direction="w" value="Content Script → Background → Results Tab
+     ↓              ↓             ↓
+DOM Scanning → Session Storage → Grid Display" tabindex="0" role="button">
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-copy js-clipboard-copy-icon">
+              <path
+                d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+              </path>
+              <path
+                d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+              </path>
+            </svg>
+            <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+              class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+              <path
+                d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z">
+              </path>
+            </svg>
+            </clipboard-copy>
+        </div>
+        </div>
+        <ul dir="auto">
+          <li><strong>In-memory sessions</strong> - No persistent storage of image data</li>
+          <li><strong>Message passing</strong> - Avoids URL length limits for large datasets</li>
+          <li><strong>One-time access</strong> - Session deleted after results tab loads</li>
+        </ul>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">⚙️ Settings &amp; Features</h2><a
+          id="user-content-️-settings--features" class="anchor" aria-label="Permalink: ⚙️ Settings &amp; Features"
+          href="#️-settings--features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Extraction Settings</h3>
+      </div>
+      <ul dir="auto">
+        <li><strong>Size Filters</strong> - Minimum width/height (50px, 100px, 200px)</li>
+        <li><strong>Source Types</strong> - IMG tags, backgrounds, SVG, video posters</li>
+        <li><strong>Alt Text</strong> - Optional extraction for search/tooltips (off by default)</li>
+        <li><strong>Performance</strong> - Max images per page, extraction timeout</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Results Features</h3>
+      </div>
+      <ul dir="auto">
+        <li><strong>Filtering</strong> - Format, size, source type, viewport visibility</li>
+        <li><strong>Text Search</strong> - Alt text search (when enabled)</li>
+        <li><strong>Selection Modes</strong> - Click, Shift+Click ranges, Ctrl+Click toggle</li>
+        <li><strong>Downloads</strong> - Individual images or burst download multiple selections</li>
+        <li><strong>Lightbox</strong> - Full-size preview with metadata</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Keyboard Shortcuts</h3>
+      </div>
+      <ul dir="auto">
+        <li><code>Ctrl+Shift+I</code> - Quick image extraction from any page</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">🔧 Development Features</h2><a
+          id="user-content--development-features" class="anchor" aria-label="Permalink: 🔧 Development Features"
+          href="#-development-features"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Modern TypeScript</h3>
+      </div>
+      <ul dir="auto">
+        <li><strong>Strict type checking</strong> with webextension-polyfill types</li>
+        <li><strong>Zero <code>any</code> types</strong> - Comprehensive interface coverage</li>
+        <li><strong>ES2022+ features</strong> - Modern JavaScript with full browser support</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Build System</h3>
+      </div>
+      <ul dir="auto">
+        <li><strong>tsup + esbuild</strong> - Fast, modern bundling with tree-shaking</li>
+        <li><strong>Cross-browser builds</strong> - Chrome/Firefox from single codebase</li>
+        <li><strong>Dynamic manifest</strong> - Version sync from package.json</li>
+        <li><strong>Source maps</strong> - Full debugging support in development</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Code Quality</h3>
+      </div>
+      <ul dir="auto">
+        <li><strong>ESLint + TypeScript</strong> - Strict linting with custom rules</li>
+        <li><strong>Consistent patterns</strong> - DRY utilities, centralized logging</li>
+        <li><strong>Performance focused</strong> - Optimized JSON payloads, efficient DOM scanning</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h3 tabindex="-1" class="heading-element" dir="auto">Testing &amp; Validation</h3><a
+          id="user-content-testing--validation" class="anchor" aria-label="Permalink: Testing &amp; Validation"
+          href="#testing--validation"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16"
+            height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <ul dir="auto">
+        <li><strong>Type safety</strong> - Comprehensive interfaces prevent runtime errors</li>
+        <li><strong>Lint validation</strong> - <code>npm run lint:full</code> catches issues early</li>
+        <li><strong>Build verification</strong> - <code>npm run prepack</code> ensures release readiness</li>
+      </ul>
+      <div class="markdown-heading" dir="auto">
+        <h2 tabindex="-1" class="heading-element" dir="auto">📄 License</h2><a id="user-content--license" class="anchor"
+          aria-label="Permalink: 📄 License" href="#-license"><svg class="octicon octicon-link" viewBox="0 0 16 16"
+            version="1.1" width="16" height="16" aria-hidden="true">
+            <path
+              d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+            </path>
+          </svg></a>
+      </div>
+      <p dir="auto">MIT License - Feel free to fork and modify for your image extraction needs!</p>
+    </article>
+    </div>
+    <script type='text/javascript' src='http://www.google-analytics.com/ga.js'></script>
+    <script type='text/javascript' src='/ga/tracker.js'></script>
+
+</body>
+
+</html>
